@@ -36,7 +36,7 @@ SECRET_KEY = '=5!%)x5sb969tjinw@owstukfubvb_h6f^+(sr)!=kb-w=(8tm'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "muraaipred.azurewebsites.net",
+    "mamunai.azurewebsites.net",
     "0.0.0.0",
     "127.0.0.1"
 ]
