@@ -3,6 +3,12 @@ from keras.models import load_model
 # from tensorflow.keras.applications import vgg16, inception_resnet_v2, xception, inception_v3
 from tensorflow.python.keras.backend import set_session
 import os
+
+from pathlib import Path
+
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 ####
 # Backward compatible
 tf.compat.v1.disable_v2_behavior()
@@ -16,14 +22,10 @@ set_session(SESS)
 # IMAGE_MODEL = inception_v3.InceptionV3(weights="imagenet")
 # IMAGE_MODEL = xception.Xception(weights="imagenet")
 # IMAGE_MODEL = vgg16.VGG16(weights="imagenet")
-IMAGE_MODEL = load_model('WRIST_GPU.h5')
+IMAGE_MODEL = load_model(os.path.join(BASE_DIR,'WRIST_GPU.h5'))
 print("Checking ..")
 # IMAGE_MODEL = inception_resnet_v2.InceptionResNetV2(weights="imagenet")
 
-from pathlib import Path
-
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
